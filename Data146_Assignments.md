@@ -30,7 +30,7 @@ ex2_ans = data[idx_pop]
 
 The maximum population was in China in 2007, recorded at 1318683096.
 
-## Exercise 3
+## Exercise 3 
 ### Extract all data from Europe: In 1952, which European country had the smallest population and what was its population in 2007?
 
 #### Code for Ex. 3
