@@ -17,18 +17,27 @@ Using the data frame you created by importing the gapminder.tsv data set, multip
 #### **Question 6**: 
 You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.
 
-**&**
-**==** indicates equivalence: returns True if two objects are equivalent, and False if they are not. 
-  e.g. ``` a = 6
-           b = (a==6) ``` 
-       ```b``` is now True. If ```a``` were set equal to any other number, ```b``` would be False.
-  Note: For a string, this logical operator would compare the two strings.
-  e.g. ``` string = 'Morgan'
-           a = string=='Morgan' # This is True.
-           b = string=='morgan' # This is False.
-           c = string=='bubble' # This is also False. ```
-**|**
-**^**
+- **&**
+- **==** indicates equivalence: returns True if two objects are equivalent, and False if they are not. 
+   For ints, the '==' operator compares values. 
+   
+   ~~~~     
+           a = 6
+           b = (a==6) 
+   ~~~~
+       
+    `b` is now True. If `a` were set equal to any other number, `b` would be False.
+    For strings, this logical operator would compare character-by-character.
+    
+    ~~~~
+           string = 'Morgan'
+           a = string=='Morgan' # a is True.
+           b = string=='morgan' # b is False.
+           c = string=='bubble' # c is also False.
+    ~~~~
+        
+- **|**
+- **^**
 
 #### **Question 7**: 
 Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
