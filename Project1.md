@@ -40,7 +40,7 @@ So, to import the file `my_data.csv` into the file in which I'm working, I would
 
 (3) **Also, describe why specifying an argument within a read_() function can be significant. Does data that is saved as a file in a different type of format require a particular argument in order for a data frame to be successfully imported? 
 
-If the file `my_data.csv` had instead been `my_data.tsv` indicating values separated by tabs instead of commas, I would need to pass in the argument `sep=` to tell the function 
+If the file `my_data.csv` had instead been `my_data.tsv`, indicating values separated by tabs instead of commas, I would need to pass in the argument `sep=` to tell the function 
 to look for tabs. 
 
 ~~~~
@@ -51,22 +51,23 @@ to look for tabs.
 
 (4) **Also, provide an example that describes a data frame you created. 
 
+
+
 (5) **How do you determine how many rows and columns are in a data frame?
+
+The `.shape` command (notice it has no parentheses!) returns the number of rows and columns in the dataframe. 
 
 (6) **Is there an alternate terminology for describing rows and columns?
 
 
+
 #### **Question 3**: 
-Import the gapminder.tsv data set and create a new data frame. Interrogate and describe the year variable within the data frame you created. 
-Does this variable exhibit regular intervals? 
-If you were to add new outcomes to the raw data in order to update and make it more current, which years would you add to each subset of observations? 
+**Stretch goal: can you identify how many new outcomes in total you would be adding to your data frame?
 
-Stretch goal: can you identify how many new outcomes in total you would be adding to your data frame?
+The year variable contains the years for which data (population, life expectancy, GDP, etc) was recorded. A brief analysis of the years reveals that data was recorded every five years from 1952 and until 2007. In order to update the data to 2021, we would add two more entries after 2007, one in 2012 and one in 2017. 
 
-The year variable contains the years for which data (population, life expectancy, GDP, etc) was recorded. A brief analysis of the years shows that data was recorded every five years, starting from 1952 and ending in 2007. In order to update the data to 2021, we would add two more entries after 2007, one in 2012 and one in 2017. 
 
 #### **Question 4**: 
-Using the data frame you created by importing the gapminder.tsv data set, determine which country at what point in time had the lowest life expectancy. Conduct a cursory level investigation as to why this was the case and provide a brief explanation in support of your explanation.
 
 The lowest recorded life expetancy is from Rwanda in 1992, when it was just over 23 years old. This was possibly due to civil unrest and widespread violence-- in 1992, Rwanda was in the middle of a civil war that ended in the Rwandan genocide of 1994. 
 
@@ -111,7 +112,13 @@ Describe the difference between .loc and .iloc. Provide an example of how to ext
 Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
 
 #### **Question 9**: 
-Describe the apply() function from the pandas library. What is its purpose? Using apply) to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
+**Describe the apply() function from the pandas library. 
+
+The pandas `apply()` function allows a particular function to be applied repeatedly throughough a dataframe. It allows users to specify which axis to apply the function (`axis=0` for rows and `axis=1` for columns). Instead of applying it to each individual "cell" within the dataframe, it allows operations to be performed in bulk. 
+
+**What is its purpose? Using apply() to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
+
+
 
 #### **Question 10**: 
 Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?
