@@ -1,16 +1,21 @@
 # Project 1
 #### **Question 1**: 
-Describe what is a package? Also, describe what is a library? What are the two steps you need to execute in order to install a package and then make that library of functions accessible to your workspace and current python work session? Provide examples of how you would execute these two steps using two of the packages we have used in class thus far. Be sure to include an alias in at least one of your two examples and explain why it is a good idea to do so.
 
 A Python package is a collection of executable modules and functions under a common namespace, indicated by the `.` used to call it. A library, on the other hand, is a collection of packages that may be imported into a file-- however, there may also be a library of functions inside a package that indicates a collection of functions rather than a collection of packages. 
 
 Using a package and its library of functions requires that the user first install the package by importing it:
+
    `import pandas as pd`
+   
    `import numpy`
+   
 Later, the user can call a function from the package's function library as though the function were created by the user, as long as the user specifies which package the function comes from.
+
    `example = pd.head()`
+   
 The `pd.` tells the computer to look for the function `head()` in the pandas package, which was imported under the alias `pd` above. 
-If no alias was given, the user would call it by its full name.
+If no alias had been given, the user would call it by its full name.
+
    `example = numpy.array(some_argument)`
    
 As you can see, importing the package under an alias allows the user to access the functions inside it moore quickly and cleanly (as long as the alias is easy to remember!). 
