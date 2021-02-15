@@ -3,21 +3,37 @@
 Describe what is a package? Also, describe what is a library? What are the two steps you need to execute in order to install a package and then make that library of functions accessible to your workspace and current python work session? Provide examples of how you would execute these two steps using two of the packages we have used in class thus far. Be sure to include an alias in at least one of your two examples and explain why it is a good idea to do so.
 
 #### **Question 2**: 
-Describe what is a data frame? Identify a library of functions that is particularly useful for working with data frames. In order to read a file in its remote location within the file system of your operating system, which command would you use? Provide an example of how to read a file and import it into your work session in order to create a new data frame. Also, describe why specifying an argument within a read_() function can be significant. Does data that is saved as a file in a different type of format require a particular argument in order for a data frame to be successfully imported? Also, provide an example that describes a data frame you created. How do you determine how many rows and columns are in a data frame? Is there an alternate terminology for describing rows and columns?
+(1) Describe what is a data frame? Identify a library of functions that is particularly useful for working with data frames. (2) In order to read a file in its remote location within the file system of your operating system, which command would you use? Provide an example of how to read a file and import it into your work session in order to create a new data frame. (3) Also, describe why specifying an argument within a read_() function can be significant. Does data that is saved as a file in a different type of format require a particular argument in order for a data frame to be successfully imported? (4) Also, provide an example that describes a data frame you created. (5) How do you determine how many rows and columns are in a data frame? (6) Is there an alternate terminology for describing rows and columns?
+
+A dataframe is a (typically two-dimensional) data structure that organizes and allows clear presentation of a data set. In Python, the pandas package offers tools to process and analyze data by creating dataframes from data sets that may be either imported or created. 
 
 #### **Question 3**: 
-Import the gapminder.tsv data set and create a new data frame. Interrogate and describe the year variable within the data frame you created. Does this variable exhibit regular intervals? If you were to add new outcomes to the raw data in order to update and make it more current, which years would you add to each subset of observations? Stretch goal: can you identify how many new outcomes in total you would be adding to your data frame?
+Import the gapminder.tsv data set and create a new data frame. Interrogate and describe the year variable within the data frame you created. 
+Does this variable exhibit regular intervals? 
+If you were to add new outcomes to the raw data in order to update and make it more current, which years would you add to each subset of observations? 
+
+Stretch goal: can you identify how many new outcomes in total you would be adding to your data frame?
+
+The year variable contains the years for which data (population, life expectancy, GDP, etc) was recorded. A brief analysis of the years shows that data was recorded every five years, starting from 1952 and ending in 2007. In order to update the data to 2021, we would add two more entries after 2007, one in 2012 and one in 2017. 
 
 #### **Question 4**: 
 Using the data frame you created by importing the gapminder.tsv data set, determine which country at what point in time had the lowest life expectancy. Conduct a cursory level investigation as to why this was the case and provide a brief explanation in support of your explanation.
 
+The lowest recorded life expetancy is from Rwanda in 1992, when it was just over 23 years old. This was possibly due to civil unrest and widespread violence-- in 1992, Rwanda was in the middle of a civil war that ended in the Rwandan genocide of 1994. 
+
 #### **Question 5**: 
-Using the data frame you created by importing the gapminder.tsv data set, multiply the variable pop by the variable gdpPercap and assign the results to a newly created variable. Then subset and order from highest to lowest the results for Germany, France, Italy and Spain in 2007. Create a table that illustrates your results (you are welcome to either create a table in markdown or plot/save in PyCharm and upload the image). Stretch goal: which of the four European countries exhibited the most significant increase in total gross domestic product during the previous 5-year period (to 2007)?
+Using the data frame you created by importing the gapminder.tsv data set, multiply the variable pop by the variable gdpPercap and assign the results to a newly created variable. Then subset and order from highest to lowest the results for Germany, France, Italy and Spain in 2007. Create a table that illustrates your results (you are welcome to either create a table in markdown or plot/save in PyCharm and upload the image). 
+
+Stretch goal: which of the four European countries exhibited the most significant increase in total gross domestic product during the previous 5-year period (to 2007)?
+
+
+
+
 
 #### **Question 6**: 
 You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.
 
-- **&**
+- **&** 'and' operator: 
 - **==** indicates equivalence: returns True if two objects are equivalent, and False if they are not. 
    For ints, the '==' operator compares values. 
    
@@ -36,8 +52,8 @@ You have been introduced to four logical operators thus far: &, ==, | and ^. Des
            c = string=='bubble' # c is also False.
     ~~~~
         
-- **|**
-- **^**
+- **|** inclusive or: 
+- **^** exclusive or:
 
 #### **Question 7**: 
 Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
