@@ -22,9 +22,39 @@ As you can see, importing the package under an alias allows the user to access t
 Alii are especially helpful when using the package repeatedly!
 
 #### **Question 2**: 
-(1) Describe what is a data frame? Identify a library of functions that is particularly useful for working with data frames. (2) In order to read a file in its remote location within the file system of your operating system, which command would you use? Provide an example of how to read a file and import it into your work session in order to create a new data frame. (3) Also, describe why specifying an argument within a read_() function can be significant. Does data that is saved as a file in a different type of format require a particular argument in order for a data frame to be successfully imported? (4) Also, provide an example that describes a data frame you created. (5) How do you determine how many rows and columns are in a data frame? (6) Is there an alternate terminology for describing rows and columns?
+(1) **Describe what is a data frame? Identify a library of functions that is particularly useful for working with data frames. 
 
 A dataframe is a (typically two-dimensional) data structure that organizes and allows clear presentation of a data set. In Python, the pandas package offers tools to process and analyze data by creating dataframes from data sets that may be either imported or created. 
+
+(2) **In order to read a file in its remote location within the file system of your operating system, which command would you use? Provide an example of how to read a file and import it into your work session in order to create a new data frame.**
+
+pandas has a useful function `read_csv()` that allows a user to import the contents of an external file. It takes as an argument the path of the file to be imported, and may take an additional argument specifying the type of file if it is not a `.csv` extension. 
+
+So, to import the file `my_data.csv` into the file in which I'm working, I would call the `read_csv()` function in pandas and pass the file path as an argument. Here, I will assume that `my_data.csv` is in the same directory as my current file and so I don't need to supply the full path.
+
+~~~~
+   import pandas as pd
+   
+   imported_data = pd.read_csv('my_data.csv')
+~~~~
+
+(3) **Also, describe why specifying an argument within a read_() function can be significant. Does data that is saved as a file in a different type of format require a particular argument in order for a data frame to be successfully imported? 
+
+If the file `my_data.csv` had instead been `my_data.tsv` indicating values separated by tabs instead of commas, I would need to pass in the argument `sep=` to tell the function 
+to look for tabs. 
+
+~~~~
+   import pandas as pd
+   
+   imported_data = pd.read_csv('my_data.tsv', sep=`\t`)
+~~~~
+
+(4) **Also, provide an example that describes a data frame you created. 
+
+(5) **How do you determine how many rows and columns are in a data frame?
+
+(6) **Is there an alternate terminology for describing rows and columns?
+
 
 #### **Question 3**: 
 Import the gapminder.tsv data set and create a new data frame. Interrogate and describe the year variable within the data frame you created. 
