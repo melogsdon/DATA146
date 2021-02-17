@@ -71,11 +71,11 @@ You have been introduced to four logical operators thus far: &, ==, | and ^. Des
 
 - **&** "and" operator: requires that both of two conditionals are True. (*Note: both conditionals must be enclosed in parentheses.*)
 
-~~~~
+   ~~~~
          a = 6
          b = 8
          c = ((a==6) & (b==8)) # c is True because (a==6) and (b==8) are both True.
-~~~~
+   ~~~~
 
 - **==** indicates equivalence: returns True if two objects are equivalent, and False if they are not. 
    For ints, the '==' operator compares values. 
@@ -97,7 +97,7 @@ You have been introduced to four logical operators thus far: &, ==, | and ^. Des
         
 - **|** inclusive "or": a pair of conditionals is considered True *either* if one value is True *or* if both are True.
 
-~~~~
+   ~~~~
          a = 6
          b = 8
          c = ((a==6) | (b==9)) # c is True because (a==6) is True.
@@ -107,11 +107,11 @@ You have been introduced to four logical operators thus far: &, ==, | and ^. Des
          e = ((a==6) | (b==8)) # e is True because both (a==6) and (b==8) are True.
          
          f = ((a==4) | (b==9)) $ f is False because neither (a==4) nor (b==9) is True.
-~~~~
+   ~~~~
 
 - **^** exclusive "or": a pair of conditionals is considered True if and only if *one* of the two values is True.
 
-~~~~
+   ~~~~
          a = 6
          b = 8
          c = ((a==6) ^ (b==9)) # c is True because (a==6) and (b==9) is False.
@@ -120,13 +120,17 @@ You have been introduced to four logical operators thus far: &, ==, | and ^. Des
          
          e = ((a==6) ^ (b==8)) # e is False because neither conditional is False.
 
-~~~~
+   ~~~~
 
 #### **Question 7**: 
 **Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.**
 
 #### **Question 8**: 
 **Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.**
+
+An Application Programming Interface (API) acts as an intermediate between a data source (such as a web source) and a the local file in which a user analyzes or processes the data-- it allows the user to access, copy, and alter the data locally when the code is run later. 
+
+
 
 #### **Question 9**: 
 
@@ -138,7 +142,7 @@ Alternatively, a user may execute a `for` loop to visit each cell in a series, t
 #### **Question 10**: 
 **Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?**
 
-Instead of using `iloc` to subset a number of variables to a new data frame, a user may prefer to use logical operators to group together and select for desired conditions.  
+Instead of using `iloc` to subset a number of variables to a new data frame, a user may prefer to use logical operators to group together and select for desired conditions, then use `[]` brackets to subset a a dataframe by filtering out columns or rows that don't meet the required criteria. 
 
 
 
