@@ -57,16 +57,13 @@ The year variable contains the years for which data (population, life expectancy
 The lowest recorded life expetancy is from Rwanda in 1992, when it was just over 23 years old. This was possibly due to civil unrest and widespread violence-- in 1992, Rwanda was in the middle of a civil war that ended in the Rwandan genocide of 1994. 
 
 #### **Question 5**: 
-**Using the data frame you created by importing the gapminder.tsv data set, multiply the variable pop by the variable gdpPercap and assign the results to a newly created variable.**
-
-**Then subset and order from highest to lowest the results for Germany, France, Italy and Spain in 2007. Create a table that illustrates your results (you are welcome to either create a table in markdown or plot/save in PyCharm and upload the image).**
 
 | Country | GDP (Nearest billion) |
 | ------- | --- |
 | Germany | 265B |
 | France | 186B |
 | Italy | 166B |
-| Spain | 117 |
+| Spain | 117B |
 
 
 #### **Question 6**: 
@@ -95,19 +92,25 @@ You have been introduced to four logical operators thus far: &, ==, | and ^. Des
 - **^** exclusive or:
 
 #### **Question 7**: 
-Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
+**Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.**
 
 #### **Question 8**: 
-Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
+**Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.**
 
 #### **Question 9**: 
-**Describe the apply() function from the pandas library. 
 
 The pandas `apply()` function allows a particular function to be applied repeatedly throughough a dataframe. It allows users to specify which axis to apply the function (`axis=0` for rows and `axis=1` for columns). Instead of applying it to each individual "cell" within the dataframe, it allows operations to be performed in bulk. 
 
-**What is its purpose? Using apply() to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
-
+Alternatively, a user may execute a `for` loop to visit each cell in a series, though this is less preferable as it requires more lines of code. The `apply()` function essentially allows us to execute a `for` loop across the contents of a series, applying an operation to each item in the series as the function iterates through.  
 
 
 #### **Question 10**: 
-Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?
+**Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?**
+
+Instead of using `iloc` to subset a number of variables to a new data frame, a user may prefer to use logical operators to group together and select for desired conditions.  
+
+
+
+
+
+
