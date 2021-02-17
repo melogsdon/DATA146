@@ -69,7 +69,14 @@ The lowest recorded life expetancy is from Rwanda in 1992, when it was just over
 #### **Question 6**: 
 You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.
 
-- **&** 'and' operator:
+- **&** "and" operator: requires that both of two conditionals are True. (*Note: both conditionals must be enclosed in parentheses.*)
+
+~~~~
+         a = 6
+         b = 8
+         c = ((a==6) & (b==8)) # c is True because (a==6) and (b==8) are both True.
+~~~~
+
 - **==** indicates equivalence: returns True if two objects are equivalent, and False if they are not. 
    For ints, the '==' operator compares values. 
    
@@ -88,8 +95,32 @@ You have been introduced to four logical operators thus far: &, ==, | and ^. Des
            c = string=='bubble' # c is also False.
     ~~~~
         
-- **|** inclusive or: 
-- **^** exclusive or:
+- **|** inclusive "or": a pair of conditionals is considered True *either* if one value is True *or* if both are True.
+
+~~~~
+         a = 6
+         b = 8
+         c = ((a==6) | (b==9)) # c is True because (a==6) is True.
+         
+         d = ((a==4) | (b==8)) # d is True because (b==8) is True.
+         
+         e = ((a==6) | (b==8)) # e is True because both (a==6) and (b==8) are True.
+         
+         f = ((a==4) | (b==9)) $ f is False because neither (a==4) nor (b==9) is True.
+~~~~
+
+- **^** exclusive "or": a pair of conditionals is considered True if and only if *one* of the two values is True.
+
+~~~~
+         a = 6
+         b = 8
+         c = ((a==6) ^ (b==9)) # c is True because (a==6) and (b==9) is False.
+         
+         d = ((a==4) ^ (b==9)) # d is False because neither conditional is True.
+         
+         e = ((a==6) ^ (b==8)) # e is False because neither conditional is False.
+
+~~~~
 
 #### **Question 7**: 
 **Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.**
