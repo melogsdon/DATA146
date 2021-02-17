@@ -12,12 +12,16 @@ Using a package and its library of functions requires that the user first instal
    
 Later, the user can call a function from the package's function library as though the function were created by the user, as long as the user specifies which package the function comes from.
 
-   `example = pd.head()`
+~~~~
+   example = pd.head()
+~~~~
    
 The `pd.` tells the computer to look for the function `head()` in the pandas package, which was imported under the alias `pd` above. 
 If no alias had been given, the user would call it by its full name.
 
-   `example = numpy.array(some_argument)`
+~~~~
+   example = numpy.array(some_argument)
+~~~~
    
 As you can see, importing the package under an alias allows the user to access the functions inside it moore quickly and cleanly (as long as the alias is easy to remember!). 
 Alii are especially helpful when using the package repeatedly!
@@ -130,8 +134,6 @@ You have been introduced to four logical operators thus far: &, ==, | and ^. Des
 **Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.**
 
 An Application Programming Interface (API) acts as an intermediate between a data source (such as a web source) and a the local file in which a user analyzes or processes the data-- it allows the user to access, copy, and alter the data locally when the code is run later. 
-
-
 
 #### **Question 9**: 
 
