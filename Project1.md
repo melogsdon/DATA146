@@ -22,11 +22,8 @@ As you can see, importing the package under an alias allows the user to access t
 Alii are especially helpful when using the package repeatedly!
 
 #### **Question 2**: 
-(1) **Describe what is a data frame? Identify a library of functions that is particularly useful for working with data frames. 
 
 A dataframe is a (typically two-dimensional) data structure that organizes and allows clear presentation of a data set. In Python, the pandas package offers tools to process and analyze data by creating dataframes from data sets that may be either imported or created. 
-
-(2) **In order to read a file in its remote location within the file system of your operating system, which command would you use? Provide an example of how to read a file and import it into your work session in order to create a new data frame.**
 
 pandas has a useful function `read_csv()` that allows a user to import the contents of an external file. It takes as an argument the path of the file to be imported, and may take an additional argument specifying the type of file if it is not a `.csv` extension. 
 
@@ -38,8 +35,6 @@ So, to import the file `my_data.csv` into the file in which I'm working, I would
    imported_data = pd.read_csv('my_data.csv')
 ~~~~
 
-(3) **Also, describe why specifying an argument within a read_() function can be significant. Does data that is saved as a file in a different type of format require a particular argument in order for a data frame to be successfully imported? 
-
 If the file `my_data.csv` had instead been `my_data.tsv`, indicating values separated by tabs instead of commas, I would need to pass in the argument `sep=` to tell the function 
 to look for tabs. 
 
@@ -49,41 +44,35 @@ to look for tabs.
    imported_data = pd.read_csv('my_data.tsv', sep=`\t`)
 ~~~~
 
-(4) **Also, provide an example that describes a data frame you created. 
+"my_data.tsv" contains data for the favorite colors of people in my family and the number of shirts they own in that color. If I want to get details about the average and mean of the number of favorite-colored shirts per person, I can use the `describe()` function that will return a chart containing calculations such as standard deviation, mean (average), maxima and minima, and more.
 
-
-
-(5) **How do you determine how many rows and columns are in a data frame?
-
-The `.shape` command (notice it has no parentheses!) returns the number of rows and columns in the dataframe. 
-
-(6) **Is there an alternate terminology for describing rows and columns?
-
-
+The `.shape` command (notice it has no parentheses!) returns the number of rows and columns in the dataframe, which may also be called features and targets. 
 
 #### **Question 3**: 
-**Stretch goal: can you identify how many new outcomes in total you would be adding to your data frame?
 
 The year variable contains the years for which data (population, life expectancy, GDP, etc) was recorded. A brief analysis of the years reveals that data was recorded every five years from 1952 and until 2007. In order to update the data to 2021, we would add two more entries after 2007, one in 2012 and one in 2017. 
-
 
 #### **Question 4**: 
 
 The lowest recorded life expetancy is from Rwanda in 1992, when it was just over 23 years old. This was possibly due to civil unrest and widespread violence-- in 1992, Rwanda was in the middle of a civil war that ended in the Rwandan genocide of 1994. 
 
 #### **Question 5**: 
-Using the data frame you created by importing the gapminder.tsv data set, multiply the variable pop by the variable gdpPercap and assign the results to a newly created variable. Then subset and order from highest to lowest the results for Germany, France, Italy and Spain in 2007. Create a table that illustrates your results (you are welcome to either create a table in markdown or plot/save in PyCharm and upload the image). 
+**Using the data frame you created by importing the gapminder.tsv data set, multiply the variable pop by the variable gdpPercap and assign the results to a newly created variable.**
 
-Stretch goal: which of the four European countries exhibited the most significant increase in total gross domestic product during the previous 5-year period (to 2007)?
+**Then subset and order from highest to lowest the results for Germany, France, Italy and Spain in 2007. Create a table that illustrates your results (you are welcome to either create a table in markdown or plot/save in PyCharm and upload the image).**
 
-
-
+| Country | GDP (Nearest billion) |
+| ------- | --- |
+| Germany | 265B |
+| France | 186B |
+| Italy | 166B |
+| Spain | 117 |
 
 
 #### **Question 6**: 
 You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.
 
-- **&** 'and' operator: 
+- **&** 'and' operator:
 - **==** indicates equivalence: returns True if two objects are equivalent, and False if they are not. 
    For ints, the '==' operator compares values. 
    
