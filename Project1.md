@@ -4,10 +4,11 @@
 A Python package is a collection of executable modules and functions under a common namespace, indicated by the `.` used to call it. A library, on the other hand, is a collection of packages that may be imported into a file-- however, there may also be a library of functions inside a package that indicates a collection of functions rather than a collection of packages. 
 
 Using a package and its library of functions requires that the user first install the package by importing it:
-
-   `import pandas as pd`
+~~~~
+   import pandas as pd
    
-   `import numpy`
+   import numpy
+~~~~
    
 Later, the user can call a function from the package's function library as though the function were created by the user, as long as the user specifies which package the function comes from.
 
