@@ -63,12 +63,12 @@ The lowest recorded life expetancy is from Rwanda in 1992, when it was just over
 
 #### **Question 5**: 
 
-      | Country | GDP (Nearest billion) |
-      | ------- | --- |
-      | Germany | 265B |
-      | France | 186B |
-      | Italy | 166B |
-      | Spain | 117B |
+   | Country | GDP (Nearest billion) |
+   | ------- | --- |
+   | Germany | 265B |
+   | France | 186B |
+   | Italy | 166B |
+   | Spain | 117B |
 
 
 #### **Question 6**: 
@@ -129,12 +129,12 @@ You have been introduced to four logical operators thus far: &, ==, | and ^. Des
 
 Consider our GDP table from above (with an additional index column) to be a dataframe called `df`:
 
-      | Index | Country | GDP (Nearest billion) |
-      |--- | ------- | --- |
-      | 0 | Germany | 265B |
-      | 1 | France | 186B |
-      | 2 | Italy | 166B |
-      | 3 | Spain | 117B |
+   | Index | Country | GDP (Nearest billion) |
+   |--- | ------- | --- |
+   | 0 | Germany | 265B |
+   | 1 | France | 186B |
+   | 2 | Italy | 166B |
+   | 3 | Spain | 117B |
 
 Since they're already sorted from greatest to least GDP, subset this by the three lowest GDPs we can use `.iloc` to subset the last three, from index 1 (Spain) until the first index which we do not want to include (in this case, index 4; alternatively, we could have left the last index blank to indicate stopping at the end).
 
@@ -144,11 +144,11 @@ Since they're already sorted from greatest to least GDP, subset this by the thre
 
 The resulting table will then read:
 
-      | Index | Country | GDP (Nearest billion) |
-      |--- | ------- | --- |
-      | 1 | France | 186B |
-      | 2 | Italy | 166B |
-      | 3 | Spain | 117B |
+   | Index | Country | GDP (Nearest billion) |
+   |--- | ------- | --- |
+   | 1 | France | 186B |
+   | 2 | Italy | 166B |
+   | 3 | Spain | 117B |
 
 #### **Question 8**: 
 An Application Programming Interface (API) acts as an intermediate between a data source (such as a web source) and a the local file in which a user analyzes or processes the data-- it allows the user to access, copy, and alter the data locally when the code is run later. 
