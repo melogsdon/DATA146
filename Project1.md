@@ -123,14 +123,32 @@ You have been introduced to four logical operators thus far: &, ==, | and ^. Des
    ~~~~
 
 #### **Question 7**: 
-**Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.**
 
 - `.loc`  : allows dataframe subsetting by the *label* of a row or column
 - `.iloc` : allows dataframe subsetting by the *index* of a row or column
 
-~~~~
+Consider our GDP table from above (with an additional index column) to be a dataframe called `df`:
+
+| Index | Country | GDP (Nearest billion) |
+|--- | ------- | --- |
+| 0 | Germany | 265B |
+| 1 | France | 186B |
+| 2 | Italy | 166B |
+| 3 | Spain | 117B |
+
+Since they're already sorted from greatest to least GDP, subset this by the three lowest GDPs we can use `.iloc` to subset the last three, from index 1 (Spain) until the first index which we do not want to include (in this case, index 4; alternatively, we could have left the last index blank to indicate stopping at the end).
 
 ~~~~
+df.iloc[1:4]
+~~~~
+
+The resulting table will then read:
+
+| Index | Country | GDP (Nearest billion) |
+|--- | ------- | --- |
+| 1 | France | 186B |
+| 2 | Italy | 166B |
+| 3 | Spain | 117B |
 
 #### **Question 8**: 
 An Application Programming Interface (API) acts as an intermediate between a data source (such as a web source) and a the local file in which a user analyzes or processes the data-- it allows the user to access, copy, and alter the data locally when the code is run later. 
@@ -170,18 +188,20 @@ Once this is done, I can use `pandas` to simply read the file and create a dataf
 
 #### **Question 9**: 
 
-The pandas `apply()` function allows a particular function to be applied repeatedly throughough a dataframe. It allows users to specify which axis to apply the function (`axis=0` for rows and `axis=1` for columns). Instead of applying it to each individual "cell" within the dataframe, it allows operations to be performed in bulk. 
+The pandas `apply()` function allows a particular function to be applied repeatedly throughough a dataframe. It allows users to specify which axis to apply the function using the `axis` argument (`axis=0` for rows and `axis=1` for columns). Instead of applying it to each individual "cell" within the dataframe, it allows operations to be performed in bulk. 
 
 Alternatively, a user may execute a `for` loop to visit each cell in a series, though this is less preferable as it requires more lines of code. The `apply()` function essentially allows us to execute a `for` loop across the contents of a series, applying an operation to each item in the series as the function iterates through.  
 
 
 #### **Question 10**: 
-**Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?**
-
 Instead of using `iloc` to subset a number of variables to a new data frame, a user may prefer to use logical operators to group together and select for desired conditions, then use `[]` brackets to subset a a dataframe by filtering out columns or rows that don't meet the required criteria. 
 
+First, we would set a conditional (or series of conditionals, if needed), such as `dataframe['Column']=='Contains_This'`. Then, we could select each row in this column for which this conditional is True by setting this equal to the original dataframe (or a copy!):
 
+~~~~
+         filtered_dataframe = dataframe[dataframe['Column']=='Contains_This']
+~~~~
 
-
+The resulting dataframe `filtered_dataframe` will filter through the rows in column `Column` that contain the variable `Contains_This`. 
 
 
