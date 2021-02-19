@@ -105,12 +105,9 @@ You have been introduced to four logical operators thus far: &, ==, | and ^. Des
    ~~~~
          a = 6
          b = 8
-         c = ((a==6) | (b==9)) # c is True because (a==6) is True.
-         
-         d = ((a==4) | (b==8)) # d is True because (b==8) is True.
-         
+         c = ((a==6) | (b==9)) # c is True because (a==6) is True.        
+         d = ((a==4) | (b==8)) # d is True because (b==8) is True.        
          e = ((a==6) | (b==8)) # e is True because both (a==6) and (b==8) are True.
-         
          f = ((a==4) | (b==9)) $ f is False because neither (a==4) nor (b==9) is True.
    ~~~~
 
@@ -120,9 +117,7 @@ You have been introduced to four logical operators thus far: &, ==, | and ^. Des
          a = 6
          b = 8
          c = ((a==6) ^ (b==9)) # c is True because (a==6) and (b==9) is False.
-         
-         d = ((a==4) ^ (b==9)) # d is False because neither conditional is True.
-         
+         d = ((a==4) ^ (b==9)) # d is False because neither conditional is True.        
          e = ((a==6) ^ (b==8)) # e is False because neither conditional is False.
 
    ~~~~
@@ -130,10 +125,48 @@ You have been introduced to four logical operators thus far: &, ==, | and ^. Des
 #### **Question 7**: 
 **Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.**
 
-#### **Question 8**: 
-**Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.**
+- `.loc`  : allows dataframe subsetting by the *label* of a row or column
+- `.iloc` : allows dataframe subsetting by the *index* of a row or column
 
+~~~~
+
+~~~~
+
+#### **Question 8**: 
 An Application Programming Interface (API) acts as an intermediate between a data source (such as a web source) and a the local file in which a user analyzes or processes the data-- it allows the user to access, copy, and alter the data locally when the code is run later. 
+
+We will need to import `requests`, `os`, and `pandas`, in order to construct a request to a remote server, pull the data and write to a local file, and import the data into a local work session, respectively. 
+
+~~~~
+         import requests
+         import os
+         import pandas
+~~~~
+
+Next, we need to specify a data source by its url and a folder name in which the data should go when it is pulled from the web. Here, I've called this folder "Data" and provided an `if` conditional that uses `os` to check if there is such a folder in the directory in which I'm working-- if there is no such folder, it will create it for me. Then I specify a filename into which I will write the copied data.
+
+~~~~        
+         url = 'https://onlinedata.com/download_data'
+         
+         folder_name = 'Data'
+         if not os.path.exists(data_folder):
+            os.makedirs(data_folder)
+            
+         file_name = 'os.path.join(folder_name, 'File')        
+~~~~
+
+Finally, the last steps are to access the web_source using `requests`, and open (`open()`) and `write()` a copy of the data into the file I created. 
+
+Once this is done, I can use `pandas` to simply read the file and create a dataframe!
+
+~~~~       
+         web_source = requests.get(url)
+         
+         with open(file_name, 'wb') as i:
+            i.write(web_source.content)
+            
+         my_dataframe = pandas.read_csv(filename)
+~~~~
 
 #### **Question 9**: 
 
