@@ -2,4 +2,4 @@
 
 ## [Assignment 1](Assignment1.md)
 
-## [Project 1 - Coming Soon!](no link yet)
+## [Project 1](Project1.md)
