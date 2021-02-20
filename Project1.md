@@ -74,14 +74,14 @@ The lowest recorded life expetancy is from Rwanda in 1992, when it was just over
 #### **Question 6**: 
 You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.
 
-- **&** Bitwise "and" operator: if both of two bits are 1, set each bit to 1. In essence, "True" if both of two conditionals are True. (*Note: parentheses must be used about each conditional, as shown below.)
+- & : Bitwise "and" operator: if both of two bits are 1, set each bit to 1. In essence, "True" if both of two conditionals are True. (*Note: parentheses must be used about each conditional, as shown below.)
    ~~~~
          a = 6
          b = 8
          c = ((a==6) & (b==8)) # c is True because (a==6) and (b==8) are both True.
    ~~~~
 
-- **==** indicates equivalence: returns True if two objects are equivalent, and False if they are not. 
+- == : indicates equivalence: returns True if two objects are equivalent, and False if they are not. 
    For ints, the '==' operator compares values. 
    
    ~~~~     
@@ -99,7 +99,7 @@ You have been introduced to four logical operators thus far: &, ==, | and ^. Des
            c = string=='bubble' # c is also False.
     ~~~~
         
-- **|** Bitwise "inclusive or": Each bit is set to 1 if one of the two bits is 1. A pair of conditionals is considered True *either* if one value is True *or* if both are True.
+- | : Bitwise "inclusive or": Each bit is set to 1 if one of the two bits is 1. A pair of conditionals is considered True *either* if one value is True *or* if both are True.
 
    ~~~~
          a = 6
@@ -110,7 +110,7 @@ You have been introduced to four logical operators thus far: &, ==, | and ^. Des
          f = ((a==4) | (b==9)) $ f is False because neither (a==4) nor (b==9) is True.
    ~~~~
 
-- **^** Bitwise "exclusive or": Each bite is set to 1 if and only if one bit is equal to 1. A pair of conditionals is considered True if and only if one of the two values is True.
+- ^ : Bitwise "exclusive or": Each bite is set to 1 if and only if one bit is equal to 1. A pair of conditionals is considered True if and only if one of the two values is True.
 
    ~~~~
          a = 6
