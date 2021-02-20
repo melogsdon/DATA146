@@ -99,7 +99,7 @@ You have been introduced to four logical operators thus far: &, ==, | and ^. Des
            c = string=='bubble' # c is also False.
     ~~~~
         
-- | : Bitwise "inclusive or": Each bit is set to 1 if one of the two bits is 1. A pair of conditionals is considered True *either* if one value is True *or* if both are True.
+- &#124; : Bitwise "inclusive or": Each bit is set to 1 if one of the two bits is 1. A pair of conditionals is considered True *either* if one value is True *or* if both are True.
 
    ~~~~
          a = 6
