@@ -11,7 +11,10 @@
   e.g. college majors/minors, a senator's political stances
 
 **Example**: In a fourth grade English class, a teacher may consider a student's average weekly spelling test score (continuous) as well as their position in a school spelling bee (ordinal) to determine whether students fall into "Excellent", "Acceptable", or "Needs Improvement" categories (nominal) for fourth-grade spelling. 
-  (Avg. score)*0.8 + (1/(Spelling Bee Position))*0.2 = Student spelling score
+ 
+ ~~~~
+ (Avg. score)*0.8 + (1/(Spelling Bee Position))*0.2 = Student spelling score
+ ~~~~
   
   | Category | Spelling Score |
   | ------ | -------- |
