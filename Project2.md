@@ -13,12 +13,11 @@
 **Example**: In a fourth grade English class, a teacher may consider a student's average weekly spelling test score (continuous) as well as their position in a school spelling bee (ordinal) to determine whether students fall into "Excellent", "Acceptable", or "Needs Improvement" categories (nominal) for fourth-grade spelling. 
   (Avg. score)*0.8 + (1/(Spelling Bee Position))*0.2 = Student spelling score
   
-  | Spelling Score | Category |
-  | ~~~~~         | ~~~~~~~ |
-  | 0.399 or below   | Needs Improvement |
-  | 0.4 - 0.699    | Acceptable |
-  | 0.7 - 1.0 | Excellent |
-
+  | Category | Spelling Score |
+  | ------ | -------- |
+  | Excellent | 1.0 - 0.7 |
+  | Acceptable | 0.699 - 0.4  |
+  | Needs Improvement | 0.399 or below |
 
 #### Question 2
 **Comment out the seed from your randomly generated data set of 1000 observations and use the beta distribution to produce a plot that has a mean that approximates the 50th percentile. Also produce both a right skewed and left skewed plot by modifying the alpha and beta parameters from the distribution. Be sure to modify the widths of your columns in order to improve legibility of the bins (intervals). Include the mean and median for all three plots.**
