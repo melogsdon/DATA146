@@ -31,6 +31,8 @@
 
 ![](left_skew.png)
 
+![](histogram.png)
+
 
 ## Question 3
 **Using the gapminder data set, produce two overlapping histograms within the same plot describing life expectancy in 1952 and 2007. Plot the overlapping histograms using both the raw data and then after applying a logarithmic transformation (np.log10() is fine). Which of the two resulting plots best communicates the change in life expectancy amongst all of these countries from 1952 to 2007?**
