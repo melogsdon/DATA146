@@ -28,11 +28,16 @@
 **Also produce both a right skewed and left skewed plot by modifying the alpha and beta parameters from the distribution. Be sure to modify the widths of your columns in order to improve legibility of the bins (intervals). Include the mean and median for all three plots.**
 
 ![](right-skew.png)
+  median: 0.9998803208420329
+  mean: 0.9795614164530622
 
 ![](left_skew.png)
+  median: 0.00014172557889264683
+  mean: 0.01966672534945365
 
 ![](histogram.png)
-
+  median: 0.5003349933774568
+  mean: 0.5015358982718342
 
 ## Question 3
 **Using the gapminder data set, produce two overlapping histograms within the same plot describing life expectancy in 1952 and 2007. Plot the overlapping histograms using both the raw data and then after applying a logarithmic transformation (np.log10() is fine). Which of the two resulting plots best communicates the change in life expectancy amongst all of these countries from 1952 to 2007?**
