@@ -27,8 +27,9 @@
 
 **Also produce both a right skewed and left skewed plot by modifying the alpha and beta parameters from the distribution. Be sure to modify the widths of your columns in order to improve legibility of the bins (intervals). Include the mean and median for all three plots.**
 
-- right-skew: beta=5.0, alpha=0.1
-- left-skew: 
+![](right-skew.png)
+
+![](left_skew.png)
 
 
 ## Question 3
