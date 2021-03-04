@@ -47,10 +47,6 @@ The below two plots display the number of countries (y-axis) that fall into each
 
 In the first plot (Figure 4), the values are plot as-is, while in the second (Figure 5), the data are plot after being logarithmically transformed. 
 
-A logarithmic transformation aims to clarify data presentation by "rescaling" values, thus allowing for comparison between very differently scaled values, such as decimals and billions. In this particular application, the number of countries and the life expectancy are similarly scaled: both are double-digit positive numbers. 
-
-Figure 5 is actually more difficult to understand than Figure 4! In this case, the best way to understand the change in life expectancy is with Figure 4.
-
 <img src="lifeexp.png" width="500">
 
  **Figure 4:**  *Number of Countries vs. Life Expectancy for 2007 (Blue) and 1952 (Orange)* clearly communicates life expectancy growth over time.
@@ -58,12 +54,15 @@ Figure 5 is actually more difficult to understand than Figure 4! In this case, t
 <img src="loglifeexp.png" width="500">
 
  **Figure 5:**  *Number of Countries vs. Logarithmic Life Expectancy for 2007 (Blue) and 1952 (Orange)* confuses the axis scaling of the previous plot.
+ 
+ A logarithmic transformation aims to clarify data presentation by "rescaling" values, thus allowing for comparison between very differently scaled values, such as decimals and billions. In this particular application, the number of countries and the life expectancy are similarly scaled: both are double-digit positive numbers. 
+
+Figure 5 is actually more difficult to understand than Figure 4! In this case, the best way to understand the change in life expectancy is with Figure 4.
 
 ## Logarithmic Transformation: Box Plot
 
 The following box plots show change in overall population at 5-year intervals, from 1952 to 2007. Each box shows the complete distribution of populations among all listed countries in that year, and together they are able to convey that these countries have seen an overall population growth.
 
-In the first plot (Figure 6), the boxes are so compressed that the percentile lines are illegible! The population values are so much bigger than the year that the scaling makes it nearly impossible to understand the relationship between the two. The second plot (Figure 7), however, contains data that underwent a logarithmic transformation. It now represents the scale of population. Figure 6 clearly communicates that the scale of population grows over time, as the box changes "moves" up along the y-axis of population over time.
 
 <img src="box_plot.png" width="800">
 
@@ -73,7 +72,9 @@ In the first plot (Figure 6), the boxes are so compressed that the percentile li
 <img src="log_box_plot.png" width="800">
 
  **Figure 7:**  *Logarithmic Population Distribution vs. Year* shows a clear picture of population growth.
+ 
 
+In the first plot (Figure 6), the boxes are so compressed that the percentile lines are illegible! The population values are so much bigger than the year that the scaling makes it nearly impossible to understand the relationship between the two. The second plot (Figure 7), however, contains data that underwent a logarithmic transformation. It now represents the scale of population. Figure 6 clearly communicates that the scale of population grows over time, as the box changes "moves" up along the y-axis of population over time.
 
 
 
