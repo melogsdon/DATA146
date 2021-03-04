@@ -1,5 +1,4 @@
 ## Continuous, Ordinal, and Nominal Data
-**Describe continuous, ordinal and nominal data. Provide examples of each. Describe a model of your own construction that incorporates variables of each type of data. You are perfectly welcome to describe your model using english rather than mathematical notation if you prefer. Include hypothetical variables that represent your features and target.**
 
 **Continuous data** spans some range along a continuum, is typically not countable, and is able to be segmented into increasingly smaller increments.
   e.g. length of time, volume of liquid, mass of an object
@@ -22,10 +21,7 @@
   | Acceptable | 0.699 - 0.4  |
   | Needs Improvement | 0.399 or below |
 
-## Question 2
-**Comment out the seed from your randomly generated data set of 1000 observations and use the beta distribution to produce a plot that has a mean that approximates the 50th percentile.**
-
-**Also produce both a right skewed and left skewed plot by modifying the alpha and beta parameters from the distribution. Be sure to modify the widths of your columns in order to improve legibility of the bins (intervals). Include the mean and median for all three plots.**
+## Left- and Right-Skew, 50th Percentile Mean Approximation
 
 A 50th-percentile plot contains data that are equally distributed around the median (or approximately so). Such plots should have symmetry about the median, though they do not need to look like a normal distribution, or bell curve. The below plot approximates has a mean that is approximately 50th percentile; its mean is about 0.5015 and its median is about 0.5003. 
 
@@ -42,8 +38,7 @@ A 50th-percentile plot contains data that are equally distributed around the med
 
 
 
-## Question 3
-**Using the gapminder data set, produce two overlapping histograms within the same plot describing life expectancy in 1952 and 2007. Plot the overlapping histograms using both the raw data and then after applying a logarithmic transformation (np.log10() is fine). Which of the two resulting plots best communicates the change in life expectancy amongst all of these countries from 1952 to 2007?**
+## Logarithmic Transformation: Histogram
 
 The below two plots display the number of countries (y-axis) that fall into each average life expectancy. Both plots compare this data for 1952 and 2007 to relay an overall increase in life expectancy over time. 
 
@@ -53,14 +48,13 @@ A logarithmic transformation aims to clarify data presentation by "rescaling" va
 
 Figure 5 is actually more difficult to understand than Figure 4! In this case, the best way to understand the change in life expectancy is with Figure 4.
 
-![](lifeexp.png)
+![](lifeexp.png =100x100)
 Figure 4: *Number of Countries vs. Life Expectancy for 2007 (Blue) and 1952 (Orange)* clearly communicates life expectancy growth over time.
 
-![](loglifeexp.png)
+![](loglifeexp.png =100x100)
 Figure 5: *Number of Countries vs. Logarithmic Life Expectancy for 2007 (Blue) and 1952 (Orange)* confuses the axis scaling of the previous plot.
 
-## Question 4
-**Using the seaborn library of functions, produce a box and whiskers plot of population for all countries at the given 5-year intervals. Also apply a logarithmic transformation to this data and produce a second plot. Which of the two resulting box and whiskers plots best communicates the change in population amongst all of these countries from 1952 to 2007?**
+## Logarithmic Transformation: Box Plot
 
 The following box plots show change in overall population at 5-year intervals, from 1952 to 2007. Each box shows the complete distribution of populations among all listed countries in that year, and together they are able to convey that these countries have seen an overall population growth.
 
