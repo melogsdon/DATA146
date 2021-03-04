@@ -25,15 +25,16 @@
 
 A 50th-percentile plot contains data that are equally distributed around the median (or approximately so). Such plots should have symmetry about the median, though they do not need to look like a normal distribution, or bell curve. The below plot approximates has a mean that is approximately 50th percentile; its mean is about 0.5015 and its median is about 0.5003. 
 
-![](histogram.png)
+<img src="histogram.png" width="500">
+
   Figure 1: 50th percentile mean approximation (Median: 0.5003349933774568,  Mean: 0.5015358982718342)
   
 "Skew" describes the "trailing end" of plot data. If a plot is unequally distributed across the x-axis, having a clear peak on one side and a tail on the other, it is said to be skewed. Left-skew describes a right-leaning plot with a lefthand tail; right-skew describes a left-leaning plot with a righthand tail. An example of each is shown below, along with their median and mean. 
 
-![](right-skew.png)
+<img src="right-skew.png" width="500">
   Figure 2: An example of right-skewed data (Median: 0.9998803208420329, Mean: 0.9795614164530622)
 
-![](left_skew.png)
+<img src="left_skew.png" width="500">
   Figure 3: An example of left-skewed data (Median: 0.00014172557889264683, Mean: 0.01966672534945365)
 
 
@@ -48,11 +49,10 @@ A logarithmic transformation aims to clarify data presentation by "rescaling" va
 
 Figure 5 is actually more difficult to understand than Figure 4! In this case, the best way to understand the change in life expectancy is with Figure 4.
 
-![](lifeexp.png)
-<img src="lifeexp.png" width="200">
+<img src="lifeexp.png" width="500">
 Figure 4: *Number of Countries vs. Life Expectancy for 2007 (Blue) and 1952 (Orange)* clearly communicates life expectancy growth over time.
 
-![](loglifeexp.png)
+<img src="loglifeexp.png" width="500">
 Figure 5: *Number of Countries vs. Logarithmic Life Expectancy for 2007 (Blue) and 1952 (Orange)* confuses the axis scaling of the previous plot.
 
 ## Logarithmic Transformation: Box Plot
@@ -61,11 +61,11 @@ The following box plots show change in overall population at 5-year intervals, f
 
 In the first plot (Figure 6), the boxes are so compressed that the percentile lines are illegible! The population values are so much bigger than the year that the scaling makes it nearly impossible to understand the relationship between the two. The second plot (Figure 7), however, contains data that underwent a logarithmic transformation. It now represents the scale of population. Figure 6 clearly communicates that the scale of population grows over time, as the box changes "moves" up along the y-axis of population over time.
 
-![](box_plot.png)
+<img src="box_plot.png" width="800">
 Figure 6: *Population Distribution vs. Year* has poorly scaled axes.
 
 
-![](log_box_plot.png)
+<img src="log_box_plot.png" width="800">
 Figure 7: *Logarithmic Population Distribution vs. Year* shows a clear picture of population growth.
 
 
