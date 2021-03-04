@@ -52,5 +52,5 @@
 
 ![](box_plot.png)
 
-![](log_box_plot)
+![](log_box_plot.png)
 
