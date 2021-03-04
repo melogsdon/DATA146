@@ -48,10 +48,11 @@ A logarithmic transformation aims to clarify data presentation by "rescaling" va
 
 Figure 5 is actually more difficult to understand than Figure 4! In this case, the best way to understand the change in life expectancy is with Figure 4.
 
-![](lifeexp.png=100x100)
+![](lifeexp.png)
+<img src="lifeexp.png" width="200">
 Figure 4: *Number of Countries vs. Life Expectancy for 2007 (Blue) and 1952 (Orange)* clearly communicates life expectancy growth over time.
 
-![](loglifeexp.png=100x100)
+![](loglifeexp.png)
 Figure 5: *Number of Countries vs. Logarithmic Life Expectancy for 2007 (Blue) and 1952 (Orange)* confuses the axis scaling of the previous plot.
 
 ## Logarithmic Transformation: Box Plot
