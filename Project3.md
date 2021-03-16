@@ -36,7 +36,7 @@ standardize: standard scalar, transform data, not all of it (just the features, 
 
 I used `LinearRegression()` in `sklearn` first to compare with the ridge regression model, and it yielded a correlation coefficient of 0.0188.
 
-
+After that, I scaled the data using  `StandardScaler()` again and used a ridge regression. This time, it yield a training correlation coefficient of 0.019 and a testing correlation coefficient of 0.016. This is much better than the others, as the correlations are closer together (and, of course, the testing coefficient is non-negative!), though they are still extremely small and are unable to show any meaningful connection in our data.
 
 
 ## Question 4
@@ -44,6 +44,12 @@ I used `LinearRegression()` in `sklearn` first to compare with the ridge regress
 - How did each of these three models perform after using the dataset that replaced asking price with the actual sale price? 
 - What were the training and testing scores you produced? 
 - Interpret and assess your output.
+
+| Model | Description | Internal Validity | External Validity |
+| ~~~ | ~~~ | ~~~ | ~~~ |
+|Linear Regression| Fit to raw data |0.004|-0.021|
+|Transformed Linear Regression|Linear regression fit to data transformed with `StandardScaler`|0.005|-0.013|
+|Ridge Regression| Transformed data with a ridge regression|0.004|-0.001|
 
 
 ## Question 5
