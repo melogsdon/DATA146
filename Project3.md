@@ -1,11 +1,13 @@
 ## Question 1
-- Download the dataset charleston_ask.csv and import it into your PyCharm project workspace.
-- Specify and train a model the designates the asking price as your target (y) variable and beds, baths and area (in square feet) as your features. 
 - Train and test your target and features using a linear regression model. Describe how your model performed. 
-- What were the training and testing scores you produced? How many folds did you assign when partitioning your training and testing data? 
-- Interpret and assess your output.
 
-to produce the training and testing set from raw data: use KFold to separate training and testing data
+I assigned 10 folds (splits) in my data so that out of the 715 data points, I would have 10 groups of around 71 data points. KFold then takes my data (Charleston asking price data) and randomly assigns the 715 data points into these ten groups. It will then iterate through and use each individual group as the testing data for the other nine (approximately 639 data points) until each fold has acted as training data nine times and testing data once. 
+
+My model produced training and testing scores of 0.019 and -0.109, respectively. These scores indicate very poor model performance: in fact, they indicate absolutely no meaningful correlation found using this model! A "perfect" correlation score would be 1, and a good score would be closer to 1 in the range of 0 to 1 (i.e. 0.8, 0.91, etc). 
+
+As is, the data clearly lacks predicitve ability. However, there are plenty of options to transform the data that will hopefully improve our model. The first of these is transformation
+
+- Interpret and assess your output.
 
 ## Question 2
 - Now standardize your features (again beds, baths and area) prior to training and testing with a linear regression model (also again with asking price as your target). 
@@ -14,8 +16,15 @@ to produce the training and testing set from raw data: use KFold to separate tra
 - How many folds did you assign when partitioning your training and testing data? 
 - Interpret and assess your output.
 
+We can use StandardScaler() to standardize our features and hopefully compare them more easily. Since many parts of our data are scaled differently (e.g. number of bathrooms will be on an entirely different order of magnitude than price in dollars), we might be able to improve upon our model by accounting for this difference. 
+
+Now, the model performs marginally better than it did before. Our new training and testing scores are 0.014 and 0.069, respectively. We've lost the negative value that previously indicated simply that there was no correlation between the data we used to build our model and the data we used to test it. Now, while we still can see no strong correlation, it is slightly different and slightly more effective. 
+
+I still used 10 folds for training and testing the data, so the only thing changed between this model and the previous is that the data has undergone a transformation. 
+
+Overall, the model performs badly and is unable to predict any correlation between the asking price of a house and the number of beds, baths, and size. 
+
 standardize: standard scalar, transform data, not all of it (just the features, probably)
-what transformation will align the min and max? normalize. don't have to do that 
 
 
 ## Question 3
