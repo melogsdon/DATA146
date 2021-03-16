@@ -9,6 +9,10 @@ As is, the data clearly lacks predicitve ability. However, there are plenty of o
 
 - Interpret and assess your output.
 
+| Model | Description | Internal Validity | External Validity |
+| --- | ---- | ------ | ---- |
+|Linear Regression| Fit to raw data |0.019|-0.109|
+
 ## Question 2
 - Now standardize your features (again beds, baths and area) prior to training and testing with a linear regression model (also again with asking price as your target). 
 - Now how did your model perform?
@@ -26,20 +30,27 @@ Overall, the model performs badly and is unable to indicate any correlation betw
 
 standardize: standard scalar, transform data, not all of it (just the features, probably)
 
+| Model | Description | Internal Validity | External Validity |
+| --- | ---- | ------ | ---- |
+|Initial Regression | Linear regression fit to raw data |0.019|-0.109|
+|Standardized Features| Linear regression fit to data transformed with `StandardScaler`|0.014|0.069|
 
-## Question 3
+
+## 
 - Then train your dataset with the asking price as your target using a ridge regression model. 
 - Now how did your model perform? What were the training and testing scores you produced? 
 - Did you standardize the data? 
 - Interpret and assess your output.
 
-
-I used `LinearRegression()` in `sklearn` first to compare with the ridge regression model, and it yielded a correlation coefficient of 0.0188.
-
 After that, I scaled the data using  `StandardScaler()` again and used a ridge regression. This time, it yield a training correlation coefficient of 0.019 and a testing correlation coefficient of 0.016. This is much better than the others, as the correlations are closer together (and, of course, the testing coefficient is non-negative!), though they are still extremely small and are unable to show any meaningful connection in our data.
 
+| Model | Description | Internal Validity | External Validity |
+| --- | ---- | ------ | ---- |
+|Initial Regression | Linear regression fit to raw data |0.019|-0.109|
+|Standardized Features| Linear regression fit to data transformed with `StandardScaler`|0.014|0.069|
+|Ridge Regression|Ridge regression fit to transformed data|0.019|0.016|
 
-## Question 4
+## Applying all previous methods to `charleston_act.csv`
 - Next, go back, train and test each of the three previous model types/specifications, but this time use the dataset charleston_act.csv (actual sale prices). 
 - How did each of these three models perform after using the dataset that replaced asking price with the actual sale price? 
 - What were the training and testing scores you produced? 
