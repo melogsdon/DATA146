@@ -46,7 +46,7 @@ After that, I scaled the data using  `StandardScaler()` again and used a ridge r
 - Interpret and assess your output.
 
 | Model | Description | Internal Validity | External Validity |
-| ~~~ | ~~~ | ~~~ | ~~~ |
+| --- | ---- | ------ | ---- |
 |Linear Regression| Fit to raw data |0.004|-0.021|
 |Transformed Linear Regression|Linear regression fit to data transformed with `StandardScaler`|0.005|-0.013|
 |Ridge Regression| Transformed data with a ridge regression|0.004|-0.001|
