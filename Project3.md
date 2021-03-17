@@ -64,7 +64,7 @@ If we go back and apply each of the previous models (Linear, Transformed Linear,
 |Ridge Regression| Transformed data with a ridge regression|0.004|-0.001|
 
 
-## Question 5
+## New Feature: Location
 
 If we consider the simple addition of location to our list of features, we see an improvement in the training data for all three models. Unfortunately, the improvement is slight and hardly indicates a strong correlation between our target and our features. 
 
@@ -80,7 +80,7 @@ The predictive power of all of these models are weak, but the strongest is the r
 |Ridge Regression| Transformed data with a ridge regression|0.057|0.051|
 
 
-## Question 6
+## Model Comparison
 
 The model with the best results was the ridge regression on the complete data set (including the area code data) from the Charleston actual sale price data set. Since, in this particular model, the correlation coefficient is higher in the training data than in the testing data, we would say that the data is overfit. Our model is stronger in its ability to describe our training data than it is to predict new data, indicating that it fits the training data too closely. 
 
