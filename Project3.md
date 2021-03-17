@@ -18,6 +18,7 @@ As is, the data clearly lacks predicitve ability. However, there are plenty of o
 | --- | ---- | ------ | ---- |
 |Linear Regression| Fit to raw data |0.019|-0.109|
 
+
 ## Standardizing Data for a Linear Regression
 
 We can use `StandardScaler()` to standardize our features and hopefully compare them more easily. Since many parts of our data are scaled differently (e.g. number of bathrooms will be on an entirely different order of magnitude than price in dollars), we might be able to improve upon our model by accounting for this difference. 
