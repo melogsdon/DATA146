@@ -65,10 +65,6 @@ If we go back and apply each of the previous models (Linear, Transformed Linear,
 
 
 ## Question 5
-- Go back and also add the variables that indicate the zip code where each individual home is located within Charleston County, South Carolina. 
-- Train and test each of the three previous model types/specifications. 
-- What was the predictive power of each model?
-- Interpret and assess your output.
 
 If we consider the simple addition of location to our list of features, we see an improvement in the training data for all three models. Unfortunately, the improvement is slight and hardly indicates a strong correlation between our target and our features. 
 
@@ -85,8 +81,7 @@ The predictive power of all of these models are weak, but the strongest is the r
 
 
 ## Question 6
-- If you were working for Zillow as their chief data scientist, what action would you recommend in order to improve the predictive power of the model that produced your best results from the approximately 700 observations (716 asking / 660 actual)?
 
 The model with the best results was the ridge regression on the complete data set (including the area code data) from the Charleston actual sale price data set. Since, in this particular model, the correlation coefficient is higher in the training data than in the testing data, we would say that the data is overfit. Our model is stronger in its ability to describe our training data than it is to predict new data, indicating that it fits the training data too closely. 
 
-
+If I were working for Zillow, I might recommend using a ridge regression to predict housing price based on location and house amenities such as bedroom and bathroom quantities and the size of the home, as a start. My main recommendation would be to look for a stronger indicator of price point. The features used here aren't enough to accurately predict price, such as quality of building materials, how well the house has been kept up, or the prices of nearby homes (such as those in the same neighborhood). 
