@@ -50,6 +50,8 @@ After that, I scaled the data using  `StandardScaler()` again and used a ridge r
 |Standardized Features| Linear regression fit to data transformed with `StandardScaler`|0.014|0.069|
 |Ridge Regression|Ridge regression fit to transformed data|0.019|0.016|
 
+
+
 ## Applying all previous methods to `charleston_act.csv`
 - Next, go back, train and test each of the three previous model types/specifications, but this time use the dataset charleston_act.csv (actual sale prices). 
 - How did each of these three models perform after using the dataset that replaced asking price with the actual sale price? 
@@ -69,7 +71,16 @@ After that, I scaled the data using  `StandardScaler()` again and used a ridge r
 - What was the predictive power of each model?
 - Interpret and assess your output.
 
+| Model | Description | Internal Validity | External Validity |
+| --- | ---- | ------ | ---- |
+|Linear Regression| Fit to raw data |0.056|-0.05|
+|Transformed Linear Regression|Linear regression fit to data transformed with `StandardScaler`|0.061|-0.004|
+|Ridge Regression| Transformed data with a ridge regression|0.057|0.051|
+
+Adding the zip codes improves the data the most in the ridge regression, where the correlation coefficients are now 0.057 and 0.051 for training and testing, respectively. 
 
 ## Question 6
 - Finally, consider the model that produced the best results. Would you estimate this model as being overfit or underfit? 
 - If you were working for Zillow as their chief data scientist, what action would you recommend in order to improve the predictive power of the model that produced your best results from the approximately 700 observations (716 asking / 660 actual)?
+
+The model with the best results was the ridge regression on the complete data set (including the area code data) from the Charleston actual sale price data set. Since, in this particular model, the correlation coefficient is higher in the training data than in the testing data, we would say that the data is overfit. Our model is stronger in its ability to describe our training data than it is to predict new data, indicating that it fits the training data too closely. 
