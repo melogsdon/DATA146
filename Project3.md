@@ -13,6 +13,7 @@ My model produced training and testing scores of 0.019 and -0.109, respectively.
 As is, the data clearly lacks predicitve ability. However, there are plenty of options to transform the data that will hopefully improve our model. The first of these is transformation
 
 #### Charleston Asking Price: Models Summary
+
 | Model | Description | Internal Validity | External Validity |
 | --- | ---- | ------ | ---- |
 |Linear Regression| Fit to raw data |0.019|-0.109|
@@ -28,6 +29,7 @@ I still used 10 folds for training and testing the data, so the only thing chang
 Overall, the model performs badly and is unable to indicate any correlation between the asking price of a house and the number of beds, baths, and size. Since the testing score is different from the training score, we can see that the model also is unable to fit to data it hasn't seen before and has no predictive power. To rectify this, we can try a ridge regression, which is often used for overfit data. 
 
 #### Charleston Asking Price: Models Summary
+
 | Model | Description | Internal Validity | External Validity |
 | --- | ---- | ------ | ---- |
 |Initial Regression | Linear regression fit to raw data |0.019|-0.109|
@@ -41,6 +43,7 @@ Since our standardized data left much to be desired, let's try a new method for 
 Overall, it seems that the models are still unable to show a meaningful connection in the data.
 
 #### Charleston Asking Price: Models Summary
+
 | Model | Description | Internal Validity | External Validity |
 | --- | ---- | ------ | ---- |
 |Initial Regression | Linear regression fit to raw data |0.019|-0.109|
@@ -57,6 +60,7 @@ If we go back and apply each of the previous models (Linear, Transformed Linear,
 
 
 #### Charleston Actual Price: Models Summary
+
 | Model | Description | Internal Validity | External Validity |
 | --- | ---- | ------ | ---- |
 |Linear Regression| Fit to raw data |0.004|-0.021|
@@ -73,6 +77,7 @@ However, we can see that adding the zip codes improves the data the most in the 
 The predictive power of all of these models are weak, but the strongest is the ridge regresion for the data set including the houses' actual prices and locations.  
 
 #### Charleston Actual Price by Location: Models Summary
+
 | Model | Description | Internal Validity | External Validity |
 | --- | ---- | ------ | ---- |
 |Linear Regression| Fit to raw data |0.056|-0.05|
