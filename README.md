@@ -7,3 +7,5 @@
 ## [Project 2](Project2.md)
 
 ## [Project 3](Project3.md)
+
+## [Midterm Corrections](midcorrections.md)
