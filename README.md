@@ -8,4 +8,4 @@
 
 ## [Project 3](Project3.md)
 
-## [Midterm Corrections](midcorrections.md)
+## [Midterm Corrections](midterm_corrections.md)
