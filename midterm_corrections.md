@@ -133,8 +133,11 @@ print(np.mean(mse_train), np.mean(mse_test))
 ~~~~
 
 Output: 
-0.6063019182717753 0.6019800920504694
-0.5224239582328265 0.5605458408715165
+
+- 0.6063019182717753
+- 0.6019800920504694
+- 0.5224239582328265
+- 0.5605458408715165
 
 The testing coefficient is 0.60198.
 
@@ -166,11 +169,12 @@ print('Alpha max: ', rid_range[idx], 'Train max: ', rid_avg_tr_score[idx], 'Test
 ~~~~
 
 Output:
-Alpha max:  25.8 
-Train max:  0.6062707743487987 
-Test max:  0.602011168741859 
-Train MSE:  0.5224653779415789 
-Test MSE:  0.560803373017799
+
+- Alpha max:  25.8 
+- Train max:  0.6062707743487987 
+- Test max:  0.602011168741859 
+- Train MSE:  0.5224653779415789 
+- Test MSE:  0.560803373017799
 
 ### Question 20
 #### Next, try a Lasso regression with the given parameters.
@@ -198,11 +202,11 @@ print('Alpha max: ', las_range[idx], 'Train max: ', avg_tr_score[idx], 'Test max
 ~~~~
 
 Output:
-Alpha max:  0.00186
-Train max:  0.6061563795668891
-Test max:  0.6021329052825213 
-Train MSE:  0.5226201002196856 
-Test MSE:  0.5614601136061196
+- Alpha max:  0.00186
+- Train max:  0.6061563795668891
+- Test max:  0.6021329052825213 
+- Train MSE:  0.5226201002196856 
+- Test MSE:  0.5614601136061196
 
 ### Question 21
 #### Which of the three models estimates the smallest coefficient for the variable that is least correlated?
@@ -225,9 +229,9 @@ print('Linear coef: ',lin.coef_[idx])
 ~~~~
 
 Output:
-Ridge coef:  0.3012752123596445
-Lasso coef:  0.2803974316329972
-Linear coef:  0.3056962298043105
+- Ridge coef:  0.3012752123596445
+- Lasso coef:  0.2803974316329972
+- Linear coef:  0.3056962298043105
 
 ### Question 22
 #### Which of the models estimates the smallest coefficient for the variable that was most correlated?
@@ -248,9 +252,9 @@ print('Linear coef: ',lin.coef_[idx])
 ~~~~
 
 Output:
-Ridge coef:  0.8288892465528167
-Lasso coef:  0.8200140807502059
-Linear coef:  0.8296193042804506
+- Ridge coef:  0.8288892465528167
+- Lasso coef:  0.8200140807502059
+- Linear coef:  0.8296193042804506
 
 ### Question 23
 #### If we had looked at MSE instead of R2 when doing our Ridge regression would we have determined the same optimal value for alpha, or something different?
