@@ -93,7 +93,7 @@ xy_df['Target'] = y
 xy_df.corr()
 ~~~~
 
-The above command reveals, in the 'Target' columns, that MedInc is most strongly correlated with the target as its correlation coefficient is largest.
+The above command reveals, in the 'Target' column, that MedInc is most strongly correlated with the target as its correlation coefficient is largest.
 
 ### Question 16
 #### If the features are standardized, the correlations from the previous question do not change.
