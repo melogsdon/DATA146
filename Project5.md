@@ -6,38 +6,58 @@ Download the anonymized dataset describing persons.csv from a West African count
 
 ## Linear Regression
 
-
-
-#### Standardization
 Perform a linear regression and compute the MSE. Standardize the features and again computer the MSE. 
 
 |Raw Data MSE|Standardized Data MSE|
 |---|---|
-|0.44281|0.452045|
+|0.44281|0.45205|
+
+|Raw Data R^2|Standardized Data R^2|
+|---|---|
+|0.73582|0.73031|
 
 Compare the coefficients from each of the two models and describe how they have changed.
 
 
 
-### Ridge Regression
+## Ridge Regression
 
 Run a ridge regression and report your best results.
 
 |Raw Data R^2|Standardized Data R^2|
 |---|---|
-|0.44281|0.452045|
+|0.73478|0.73505|
 
-### Lasso Regression
+## Lasso Regression
 
 Run a lasso regression and report your best results.
 
 |Raw Data R^2|Standardized Data R^2|
 |---|---|
-|0.44281|0.452045|
+|0.73386|   |
 
-### Change of Target Variable
+## Change of Target Variable
 
 Repeat the previous steps using the variable wealthI as your target.
+
+#### Linear Regression
+
+|Raw Data R^2|Standardized Data R^2|
+|---|---|
+|0.82583|0.82281|
+
+#### Ridge Regression
+
+|Raw Data R^2|Standardized Data R^2|
+|---|---|
+|0.82463|0.82520|
+
+#### Lasso Regression
+
+|Raw Data R^2|Standardized Data R^2|
+|---|---|
+|0.82522|  0.82501 |
+
 
 ### Analysis and Conclusions
 
