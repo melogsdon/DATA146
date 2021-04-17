@@ -74,7 +74,7 @@ The correlation matrices are comparable yet again, and the features show a stron
 
 |Raw Data R^2|Standardized Data R^2|
 |---|---|
-|0.82583|0.82281|
+|0.82383|0.82281|
 
 ### Ridge Regression
 
@@ -95,8 +95,13 @@ Finally, I performed a Lasso regression as in my consideration of `wealthC`, and
 
 ## Analysis and Conclusions
 
-Overall, it is clear to see that `wealthI` is a stronger measure of wealth in this anonymous West African country than `wealthC`. The Lasso regression seemed to best predict the testing data, though all models worked well. 
+Overall, it is clear to see that `wealthI` is a stronger measure of wealth in this anonymous West African country than `wealthC`.
+<img src="WealthC_ridge.png" width="800">
 
-Which of the models produced the best results in predicting wealth of all persons throughout the smaller West African country being described? Support your results with plots, graphs and descriptions of your code and its implementation. 
+ **Plot 1:**  Plot of *R^2 vs. Alpha value* for Ridge regression. Used standardized dataset of testing data for the `wealthC` target.
+ 
+ <img src="WealthI_ridge.png" width="800">
 
-You are welcome to incorporate snippets to illustrate an important step, but please do not paste verbose amounts of code within your project report. Alternatively, you are welcome to provide a link in your references at the end of your (part 1) Project 5 report.
+ **Plot 2:**  Plot of *R^2 vs. Alpha value* for Ridge regression. Used standardized dataset of testing data for the `wealthI` target.
+ 
+The Ridge regression seemed overall best, because although the Lasso R^2 coefficient was slightly higher for the `wealthI` target, it was nearly identical to the Ridge coefficient. For `wealthC`, the Ridge model performed slightly better than the Lasso, and so it seems overall the best indicator of correlation between wealth and our features. Both the Lasso and the Ridge regressions performed better than the linear, though the improvement was so slightly that any of the three can be reliably utilized as a predictor. 
