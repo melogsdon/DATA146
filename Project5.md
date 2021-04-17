@@ -17,8 +17,17 @@ Perform a linear regression and compute the MSE. Standardize the features and ag
 |0.73582|0.73031|
 
 Compare the coefficients from each of the two models and describe how they have changed.
+~~~~
+tform_df = pd.DataFrame(data=tform_X)
+tform_df['wealthC'] = y
+tform_df.corr()
+~~~~
 
-
+~~~~
+df = pd.DataFrame(data=X)
+df['wealthC'] = y
+df.corr()
+~~~~
 
 ## Ridge Regression
 
@@ -34,7 +43,7 @@ Run a lasso regression and report your best results.
 
 |Raw Data R^2|Standardized Data R^2|
 |---|---|
-|0.73386|   |
+|0.73386| 0.73502 |
 
 ## Change of Target Variable
 
