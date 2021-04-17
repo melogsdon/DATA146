@@ -1,11 +1,19 @@
 # **Data 146 Exercises, Assignments, Projects**
 
-## [Assignment 1](Assignment1.md)
+## Exercises
 
-## [Project 1](Project1.md)
+### [Exercise 1](Assignment1.md)
 
-## [Project 2](Project2.md)
+## Projects
 
-## [Project 3](Project3.md)
+### [Project 1](Project1.md)
 
-## [Midterm Corrections](midterm_corrections.md)
+### [Project 2](Project2.md)
+
+### [Project 3](Project3.md)
+
+### [Project 5](Project5.md)
+
+## Midterm
+
+### [Midterm Corrections](midterm_corrections.md)
