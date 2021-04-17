@@ -96,11 +96,11 @@ Finally, I performed a Lasso regression as in my consideration of `wealthC`, and
 ## Analysis and Conclusions
 
 Overall, it is clear to see that `wealthI` is a stronger measure of wealth in this anonymous West African country than `wealthC`.
-<img src="WealthC_ridge.png" width="800">
+<img src="wealthC_ridge.png" width="800">
 
  **Plot 1:**  Plot of *R^2 vs. Alpha value* for Ridge regression. Used standardized dataset of testing data for the `wealthC` target.
  
- <img src="WealthI_ridge.png" width="800">
+ <img src="wealthI_ridge.png" width="800">
 
  **Plot 2:**  Plot of *R^2 vs. Alpha value* for Ridge regression. Used standardized dataset of testing data for the `wealthI` target.
  
