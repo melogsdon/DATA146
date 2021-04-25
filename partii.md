@@ -12,7 +12,7 @@ This time, my analytical focus will be clustering, to identify into which wealth
 
 The first clustering method I tried is K-nearest neighbors (KNN), which assings classification to a particular data point according to its "k-nearest" (for some chosen integer k) neighboring points. 
 
-The optimal k-value I found for this data was 186 neighbors, and the testing data correlation coefficient was 0.54417, indicating a moderate correlation.
+The optimal k-value I found for this data was 95 neighbors, and the testing data correlation coefficient was 0.54417, indicating a moderate correlation.
 
 KNN can be performed using "weights," which can tell KNN which characteristics to consider more than others. In this case, after testing the data without specifying a weight, I told KNN to consider distance between points and weight them using the distance (i.e. closer points would be considered more important than further points in informing a datapoint's classification). 
 
@@ -33,6 +33,10 @@ The logistic regression performed better than the weighted KNN model, and slight
 
 Since the training better has a slightly higher correlation than the testing, we can see that the data is slightly overfit, but overall the values are quite close and comparable.
 
+Logistic regression results from `CompareClasses()`:
+
+ (Accuracy: 0.55)
+
 ## Clustering: Random Forest Model
 
 - Also test the minimum number of samples required to split an internal node with
@@ -44,14 +48,16 @@ Next, I executed a random forest model and ran it four times, with 100, 500, 100
 
 | Trees | Testing R^2 |
 | --- | ---|
-| 100 | 0.48804 |
-| 500 | 0.49244 |
-| 1000| 0.49732 |
-| 5000| 0.48902 |
+| 100 | 0.50464 |
+| 500 | 0.49487 |
+| 1000| 0.49780 |
+| 5000| 0.50512 |
 
 The Each of these performed worse than the KNN and logistic models, so I tried standardizing the data. 
 
 After standardization, the new chart (below) depicts data that is slightly more correlated than before, though overall very similar. 
+
+The most accurate of all of these trials is the 5000-tree forest of unscaled data.
 
 
 | Trees | Testing R^2 | Scaled Testing R^2 |
@@ -62,11 +68,22 @@ After standardization, the new chart (below) depicts data that is slightly more 
 | 5000| 0.48902 | 0.50220 |
 
 
-## Repeat with new clusters
+## Merging clusters 2, 3
 
-Repeat the previous steps after recoding the wealth classes 2 and 3 into a single outcome. Do any of your models improve? Are you able to explain why your results have changed?
+Since the predictive power of these models is weak, I combined classes 2 and 3 into a single outcome. The new correlation coefficients improved, indicating that the initial classes didn't fit the data very well. Which the new classifications, we see much stronger predictive power in our models.
+
+| | KNN | Logistic Regression | Random Forest |
+| --|---|---|---|
+| R^2 | 0.60615 | 0.59688 | 0.60827 |
+
 
 ## Conclusions and Analysis
 
-Which of the models produced the best results in predicting wealth of all persons throughout the large West African capital city being described? Support your results with plots, graphs and descriptions of your code and its implementation. You are welcome to incorporate snippets to illustrate an important step, but please do not paste verbose amounts of code within your project report. Avoiding setting a seed essentially guarantees the authenticity of your results. You are welcome to provide a link in your references at the end of your (part 2) Project 5 report.
+Overall, the model performed best when considering classes 2 and 3 as a single classification. Under these conditions, the models that performed best were KNN and Random Forest. Their correlation coefficients were very close, but overall the Random Forest model performed slightly better because, while both models were underfit (indicating a low predictive power when the model is confronted with new information), its discrepancy between training and testing coefficients was smaller. 
+
+| | Training | Testing |
+|--|--|--|
+| KNN | 0.79631 | 0.60615 |
+| Random Forest | 0.696235 | 0.60827 |
+
 
