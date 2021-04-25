@@ -35,7 +35,9 @@ Since the training better has a slightly higher correlation than the testing, we
 
 Logistic regression results from `CompareClasses()`:
 
- (Accuracy: 0.55)
+<img src="CC_log_reg.PNG" width="500">
+
+ **Figure 1:**  Screenshot of comparison matrix output from `CompareClasses()`, with accuracy 0.55, sorting the data into classes and indicating accuracy of said sorting.
 
 ## Clustering: Random Forest Model
 
@@ -85,5 +87,15 @@ Overall, the model performed best when considering classes 2 and 3 as a single c
 |--|--|--|
 | KNN | 0.79631 | 0.60615 |
 | Random Forest | 0.696235 | 0.60827 |
+
+From the plots below, we can see visual confirmation that the class conbination improved out model, as the training and testing scores were much closer together. 
+
+<img src="KNN.PNG" width="500">
+
+ **Plot 1:**  Plot of *R^2 vs. K-value* for K-nearest neighbors model.
+ 
+ <img src="KNN_cc.PNG" width="500">
+
+ **Plot 2:**  Plot of *R^2 vs. K-value* for K-nearest neighbors model using the merged class for classes 2, 3.
 
 
