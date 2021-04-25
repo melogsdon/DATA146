@@ -12,7 +12,7 @@
 
 ### [Project 3](Project3.md)
 
-### [Project 5](Project5.md)
+### [Project 5 (I & II)](Project5.md)
 
 ## Midterm
 
